@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-section="header-principal" data-value="title">Promo · Hamburguesas · Tortas · Tacos</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet" />
+    <style>
+        /* ===== HOME.CSS (adaptado) ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .languages {
+        display: flex;
+        gap: .5rem;
+        }
+
+        .lang-button {
+        background-color: transparent;
+        font-size: 1rem;
+        font-weight: 700;
+        color:#fff;
+        border: 0;
+        cursor: pointer;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .top-header .nav-links a:hover button {
+            color: #D6B9FC;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* ---------- HEADER ---------- */
+        .top-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 2000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .top-header .logo {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .top-header .logo span {
+            color: #D6B9FC;
+        }
+
+        .top-header .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .top-header .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: color 0.3s;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .top-header .nav-links a:hover {
+            color: #D6B9FC;
+        }
+
+        /* ---------- CARRUSEL ---------- */
+        .carousel {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            background: #000;
+        }
+
+        .list {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .item-with-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: all 0.8s ease-in-out;
+            opacity: 0;
+            transform: translateX(100%);
+        }
+
+        /* Overlay */
+        .item-with-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg,
+                    rgba(0, 0, 0, 0.8) 0%,
+                    rgba(0, 0, 0, 0.6) 30%,
+                    rgba(0, 0, 0, 0.3) 70%,
+                    rgba(0, 0, 0, 0) 100%);
+            z-index: 1;
+        }
+
+        .item-with-bg.active {
+            opacity: 1;
+            transform: translateX(0%);
+            z-index: 10;
+        }
+
+        .item-with-bg.prev {
+            opacity: 0;
+            transform: translateX(-100%);
+            z-index: 5;
+        }
+
+        .item-with-bg.next {
+            opacity: 0;
+            transform: translateX(100%);
+            z-index: 5;
+        }
+
+        /* Contenido */
+        .item-with-bg .content {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+            width: 40%;
+            min-width: 300px;
+            max-width: 500px;
+            text-align: left;
+            color: #fff;
+            z-index: 2;
+            padding: 20px;
+        }
+
+        .item-with-bg:not(.active) .content {
+            display: none;
+        }
+
+        .title {
+            font-size: clamp(2.5rem, 5vw, 6rem);
+            text-transform: uppercase;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            opacity: 0;
+            animation: animate 1s ease-in-out 0.3s 1 forwards;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+            color: #fff;
+        }
+
+        .name {
+            font-size: clamp(2rem, 4vw, 4.5rem);
+            text-transform: uppercase;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: animate 1s ease-in-out 0.6s 1 forwards;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+            color: #D6B9FC;
+        }
+
+        .des {
+            font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+            line-height: 1.5;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: animate 1s ease-in-out 0.9s 1 forwards;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        }
+
+        .btn {
+            opacity: 0;
+            animation: animate 1s ease-in-out 1.2s 1 forwards;
+        }
+
+        .btn button {
+            padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+            border: 2px solid #D6B9FC;
+            background: transparent;
+            color: #D6B9FC;
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn button:hover {
+            background: #D6B9FC;
+            color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(214, 185, 252, 0.4);
+        }
+
+        @keyframes animate {
+            from {
+                opacity: 0;
+                transform: translate(0, 50px);
+                filter: blur(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translate(0);
+                filter: blur(0);
+            }
+        }
+
+        /* Flechas */
+        .arrows {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .arrows button {
+            width: clamp(50px, 8vw, 80px);
+            height: clamp(50px, 8vw, 80px);
+            color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.3);
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .arrows button:hover {
+            background: rgba(214, 185, 252, 0.3);
+            border-color: #D6B9FC;
+            transform: scale(1.1);
+        }
+
+        /* Indicadores */
+        .indicators {
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+            z-index: 1000;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .indicators button {
+            width: clamp(8px, 1.5vw, 12px);
+            height: clamp(8px, 1.5vw, 12px);
+            border-radius: 50%;
+            border: none;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .indicators button.active {
+            background: #D6B9FC;
+            transform: scale(1.2);
+        }
+
+        .indicators button:hover {
+            background: rgba(214, 185, 252, 0.7);
+        }
+
+        /* ===== RESPONSIVE (igual que en home.css) ===== */
+        @media screen and (max-width: 1024px) {
+            .item-with-bg .content {
+                left: 5%;
+                width: 50%;
+                min-width: 280px;
+            }
+            .arrows {
+                bottom: 8%;
+            }
+            .indicators {
+                bottom: 8%;
+                right: 3%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .item-with-bg::before {
+                background: linear-gradient(90deg,
+                        rgba(0, 0, 0, 0.9) 0%,
+                        rgba(0, 0, 0, 0.7) 50%,
+                        rgba(0, 0, 0, 0.3) 100%);
+            }
+            .item-with-bg .content {
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 90%;
+                max-width: 400px;
+                text-align: center;
+                padding: 0 20px;
+            }
+            .title,
+            .name {
+                text-align: center;
+            }
+            .des {
+                text-align: center;
+                margin-left: 0;
+            }
+            .arrows {
+                bottom: 12%;
+                gap: 0.8rem;
+            }
+            .indicators {
+                bottom: 12%;
+                right: 50%;
+                transform: translateX(50%);
+                gap: 0.8rem;
+            }
+            /* header adaptado */
+            .top-header .nav-links {
+                gap: 1rem;
+            }
+            .top-header .nav-links a {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .carousel {
+                height: 100vh;
+                min-height: -webkit-fill-available;
+            }
+            .item-with-bg .content {
+                width: 95%;
+                padding: 0 15px;
+            }
+            .title {
+                font-size: 2rem;
+                margin-bottom: 0.3rem;
+            }
+            .name {
+                font-size: 1.8rem;
+                margin-bottom: 0.8rem;
+            }
+            .des {
+                font-size: 0.9rem;
+                margin-bottom: 1.5rem;
+                line-height: 1.4;
+            }
+            .btn button {
+                padding: 0.7rem 1.2rem;
+                font-size: 0.9rem;
+            }
+            .arrows {
+                bottom: 15%;
+                gap: 0.6rem;
+            }
+            .arrows button {
+                width: 45px;
+                height: 45px;
+                font-size: 1rem;
+            }
+            .indicators {
+                bottom: 15%;
+                gap: 0.6rem;
+            }
+            .top-header {
+                padding: 0.7rem 5%;
+            }
+            .top-header .logo {
+                font-size: 1.2rem;
+            }
+            .top-header .nav-links {
+                gap: 0.8rem;
+            }
+            .top-header .nav-links a {
+                font-size: 0.75rem;
+            }
+        }
+
+        @media screen and (max-width: 360px) {
+            .item-with-bg .content {
+                top: 45%;
+            }
+            .title {
+                font-size: 1.8rem;
+            }
+            .name {
+                font-size: 1.5rem;
+            }
+            .des {
+                font-size: 0.8rem;
+                margin-bottom: 1.2rem;
+            }
+            .arrows {
+                bottom: 18%;
+            }
+            .indicators {
+                bottom: 18%;
+            }
+        }
+
+        @media screen and (max-height: 500px) and (orientation: landscape) {
+            .item-with-bg .content {
+                top: 55%;
+                transform: translate(-50%, -50%);
+                width: 80%;
+            }
+            .title {
+                font-size: 1.8rem;
+                margin-bottom: 0.2rem;
+            }
+            .name {
+                font-size: 1.5rem;
+                margin-bottom: 0.5rem;
+            }
+            .des {
+                font-size: 0.8rem;
+                margin-bottom: 1rem;
+                display: none;
+            }
+            .arrows {
+                bottom: 10%;
+            }
+            .indicators {
+                bottom: 10%;
+            }
+        }
+
+        @supports not (backdrop-filter: blur(10px)) {
+            .arrows button {
+                background: rgba(0, 0, 0, 0.6);
+            }
+            .top-header {
+                background: rgba(0, 0, 0, 0.7);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="top-header" id="encabezado">
+        <div class="logo" data-section="header" data-value="title"> <span>Sabor</span> Express</div>
+        <ul class="nav-links">
+            <li><a href="#" data-section="header" data-value="text1">Inicio</a></li>
+            <li><a href="negocio.html" data-section="header" data-value="text2">Negocio</a></li>
+            <li><a href="about.html" data-section="header" data-value="text3">Acerca de</a></li>
+            <li><a href="#" class="languages"><button class="lang-button" data-language="es">ES</button></a></li>
+            <li><a href="#" class="languages"><button class="lang-button" data-language="en">EN</button></a></li>
+        </ul>
+    </header>
+
+    <!-- ===== CARRUSEL ===== -->
+    <div class="carousel" id="carousel">
+        <div class="list" id="slideList">
+            <!-- Slide 1: Hamburguesa -->
+            <div class="item item-with-bg active" data-index="0"
+            style="background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1200&q=80');">
+            <div class="content">
+                <div class="title" data-section="carrucel1" data-value="title">PRODUCTO</div>
+                <div class="name" data-section="carrucel1" data-value="producto">HAMBURGUESA</div>
+                <div class="des" data-section="carrucel1" data-value="descripcion">Carne jugosa, queso derretido y vegetales frescos en un pan artesanal. La combinación perfecta de sabores.</div>
+                <div class="btn" data-section="carrucel1" data-value="precio">$2.05</div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Torta Mexicana -->
+        <div class="item item-with-bg" data-index="1"
+        style="background-image: url('torta.png');">
+        <div class="content">
+            <div class="title" data-section="carrucel2" data-value="title">PRODUCTO</div>
+            <div class="name" data-section="carrucel2" data-value="producto">TORTA MEXICANA</div>
+            <div class="des" data-section="carrucel2" data-value="descripcion">Pan suave relleno de carne adobada, aguacate, frijoles y salsa picante. Un clásico de la cocina callejera.</div>
+            <div class="btn" data-section="carrucel2" data-value="precio">$1.50</div>
+        </div>
+    </div>
+
+    <!-- Slide 3: Tacos -->
+    <div class="item item-with-bg" data-index="2"
+    style="background-image: url('hot\ dog.jpg');">
+    <div class="content">
+        <div class="title" data-section="carrucel3" data-value="title">PRODUCTO</div>
+        <div class="name" data-section="carrucel3" data-value="producto">Hot dogs</div>
+        <div class="des" data-section="carrucel3" data-value="descripcion">pan suave con una salchcha dentro mas aderesos de la mas alta calidad</div>
+        <div class="btn" data-section="carrucel3" data-value="precio">$1.00</div>
+    </div>
+</div>
+</div>
+
+<!-- ===== BOTONES DE NAVEGACIÓN ===== -->
+<div class="arrows">
+    <button class="prev" id="prevBtn">‹</button>
+    <button class="next" id="nextBtn">›</button>
+</div>
+
+<!-- ===== INDICADORES ===== -->
+<div class="indicators" id="indicators"></div>
+</div>
+
+<script>
+    (function() {
+        'use strict';
+
+        const slides = document.querySelectorAll('.item-with-bg');
+        const total = slides.length;
+        let current = 0;
+
+        const indicatorsContainer = document.getElementById('indicators');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        // Crear indicadores
+        for (let i = 0; i < total; i++) {
+            const dot = document.createElement('button');
+            dot.classList.add('indicator');
+            if (i === 0) dot.classList.add('active');
+            dot.dataset.index = i;
+            dot.addEventListener('click', function() {
+                goTo(parseInt(this.dataset.index));
+            });
+            indicatorsContainer.appendChild(dot);
+        }
+
+        const dots = document.querySelectorAll('.indicator');
+
+        function updateClasses(newIndex) {
+            // Actualizar slides
+            slides.forEach((slide, idx) => {
+                slide.classList.remove('active', 'prev', 'next');
+                if (idx === newIndex) {
+                    slide.classList.add('active');
+                } else if (idx === (newIndex - 1 + total) % total) {
+                    slide.classList.add('prev');
+                } else if (idx === (newIndex + 1) % total) {
+                    slide.classList.add('next');
+                } else {
+                    // Los demás permanecen sin clase (ocultos)
+                }
+            });
+
+            // Actualizar dots
+            dots.forEach((dot, idx) => {
+                dot.classList.toggle('active', idx === newIndex);
+            });
+        }
+
+        function goTo(index) {
+            if (index < 0) index = total - 1;
+            if (index >= total) index = 0;
+            current = index;
+            updateClasses(current);
+        }
+
+        function next() {
+            goTo((current + 1) % total);
+        }
+
+        function prev() {
+            goTo((current - 1 + total) % total);
+        }
+
+        // Eventos
+        prevBtn.addEventListener('click', prev);
+        nextBtn.addEventListener('click', next);
+
+        // Teclado (opcional)
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') prev();
+            if (e.key === 'ArrowRight') next();
+        });
+
+        // Inicializar (ya la primera está activa, pero aseguramos)
+        updateClasses(0);
+
+        // (Opcional) Autoplay cada 5 segundos
+        let autoplay = setInterval(next, 5000);
+
+        // Pausar autoplay al pasar el mouse
+        const carousel = document.getElementById('carousel');
+        carousel.addEventListener('mouseenter', () => clearInterval(autoplay));
+        carousel.addEventListener('mouseleave', () => {
+            autoplay = setInterval(next, 5000);
+        });
+
+        // Adaptar textos de los botones en móvil (prev/next) - opcional
+        function updateButtonText() {
+            const isMobile = window.innerWidth <= 768;
+            prevBtn.textContent = isMobile ? '‹' : 'prev';
+            nextBtn.textContent = isMobile ? '›' : 'next';
+        }
+        updateButtonText();
+        window.addEventListener('resize', updateButtonText);
+
+    })();
+</script>
+<script src="./js/main.js"></script>
+</body>
+</html>

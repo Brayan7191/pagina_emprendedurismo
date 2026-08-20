@@ -1,0 +1,114 @@
+{
+    "header-principal": {
+        "title": "Promotions · Burgers · Mexican Sandwiches · Tacos"
+    },
+
+    "header": {
+        "title": "Sabor Express",
+        "text1": "Home",
+        "text2": "Business",
+        "text3": "About Us"
+    },
+
+    "carrucel1": {
+        "title": "PRODUCT",
+        "producto": "BURGER",
+        "descripcion": "Juicy beef, melted cheese, and fresh vegetables on an artisan bun. The perfect combination of flavors.",
+        "precio": "$2.05"
+    },
+
+    "carrucel2": {
+        "title": "PRODUCT",
+        "producto": "MEXICAN SANDWICH",
+        "descripcion": "Soft bread filled with seasoned meat, avocado, beans, and spicy sauce. A classic of street food.",
+        "precio": "$1.50"
+    },
+
+    "carrucel3": {
+        "title": "PRODUCT",
+        "producto": "HOT DOG",
+        "descripcion": "Soft bread with a sausage inside, topped with high-quality condiments.",
+        "precio": "$1.00"
+    },
+    "negocio": {
+        "title": "About Sabor Express",
+        "text1": "Sabor Express is a fast-food business created with the goal of providing our customers with delicious food, prepared with fresh and high-quality ingredients. It was founded with the idea of offering a fast and efficient service, allowing people to enjoy tasty food at affordable prices.",
+        "text2": "We specialize in preparing burgers, hot dogs, and Mexican sandwiches, made with unique recipes that combine flavor, quality, and excellent presentation. Each of our products is prepared with dedication to ensure our customers' satisfaction.",
+        "text3": "Our mission is to become one of the most recognized fast-food businesses in the community, standing out for our good service, hygiene, and customer care.",
+        "text4": "Our vision is to expand in the future by adding new products and services, while always maintaining our commitment to offering the best flavor and an unforgettable experience for every person who visits Sabor Express."
+    },
+    "info": {
+        "mision": "Mission",
+        "vision": "Vision",
+        "valores": "Values",
+        "text1": "To offer excellent-quality fast food, providing fast, friendly, and affordable service.",
+        "text2": "To be a recognized business known for its flavor, innovation, and commitment to our customers.",
+        "text3": "Quality, responsibility, hygiene, respect, innovation, and commitment."
+    },
+    "footer": {
+        "title": "Sabor Express",
+        "description": "Fast food with the best flavor and the fastest service.",
+        "volver": "Back to the home",
+        "copyright": "© 2026 Sabor Express | Entrepreneurship"
+    },
+    "about": {
+        "title": "Group Information",
+        "slogan": "Your hunger doesn't wait, and neither do we",
+        "introduccion": "We are a group that works in an organized manner and seeks to promote our entrepreneurship with total commitment to achieve great successes. We represent effort, responsibility and perseverance; we are SABOR EXPRESS.",
+        "mision": "Mission",
+        "mision-text": "To offer high-quality food with speed, excellent customer service and a commitment to our customers' satisfaction.",
+        "vision": "Vision",
+        "vision-text": "To become a recognized business known for its quality, innovation, and excellent service within the fast food industry.",
+        "integrantes": "Members:",
+        "integrantes-name1": "Anthony Gabriel Hernandez Cartagena",
+        "integrantes-description1": "Third-year student in Technical High School for Software Development.",
+        "integrantes-age1": "Age: 18",
+        "integrantes-role1": "Role: Team Leader",
+        "integrantes-textspecial1": "Leadership",
+        "integrantes-textspecial2": "Communication",
+        "integrantes-textspecial3": "Responsibility",
+        "integrantes-name2": "Adrian Jeremias Rodriguez Guevara",
+        "integrantes-description2": "Third-year student in Technical High School for Software Development.",
+        "integrantes-age2": "Age: 18",
+        "integrantes-role2": "Role: Kitchen Staff",
+        "integrantes-textspecial4": "Teamwork",
+        "integrantes-textspecial5": "Organization",
+        "integrantes-textspecial6": "Speed",
+        "integrantes-name3": "Jose David Salazar Palacios",
+        "integrantes-description3": "Third-year student in Technical High School for Software Development.",
+        "integrantes-age3": "Age: 18",
+        "integrantes-role3": "Role: Marketing",
+        "integrantes-textspecial7": "Creativity",
+        "integrantes-textspecial8": "Communication",
+        "integrantes-textspecial9": "Strategy",
+        "integrantes-name4": "Daniela Alexandra López Navarro",
+        "integrantes-description4": "Third-year student in Technical High School for Software Development.",
+        "integrantes-age4": "Age: 18",
+        "integrantes-role4": "Role: Kitchen Staff",
+        "integrantes-textspecial10": "Teamwork",
+        "integrantes-textspecial11": "Preparation",
+        "integrantes-textspecial12": "Quality Control",
+        "integrantes-name5": "Brayan Elenilson Aguilar Navarro",
+        "integrantes-description5": "Third-year student in Technical High School for Software Development.",
+        "integrantes-age5": "Age: 18",
+        "integrantes-role5": "Role: Treasurer",
+        "integrantes-textspecial13": "Organization",
+        "integrantes-textspecial14": "Financial Control",
+        "integrantes-textspecial15": "Planning",
+        "integrantes-name6": "Melvin Daniel Martinez Peñate",
+        "integrantes-description6": "Third-year student in Technical High School for Software Development.",
+        "integrantes-age6": "Age: 18",
+        "integrantes-role6": "Role: Kitchen Staff",
+        "integrantes-textspecial16": "Teamwork",
+        "integrantes-textspecial17": "Efficiency",
+        "integrantes-textspecial18": "Adaptability",
+        "valores": "Valores",
+        "valores-item1": "✔ Responsability",
+        "valores-item2": "✔ Teamwork",
+        "valores-item3": "✔ Respect",
+        "valores-item4": "✔ Innovation",
+        "valores-item5": "✔ Commitment",
+        "volver": "Back to the home",
+        "copyright": "© 2026 Sabor Express | Entrepreneurship"
+    }
+}

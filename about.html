@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="es">
+<head id ="aboutHead">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-section="about" data-value="title">Sabor Express - Información Grupal</title>
+    <style>
+  
+   body{
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    background:
+    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+    url("fondo_about.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   }
+    .title {
+    color: #ffffff;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    }
+
+    .logo{
+    display: block;
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgb(0, 0, 0);
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+    transition: transform .2s;
+    }
+  .logo:hover{
+    transform: scale(1.05);
+   }
+    .slogan{
+    text-align:center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:#F4B400;
+    margin-top:-15px;
+    margin-bottom:30px;
+    }
+  .introduction{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+    line-height:1.8;
+    font-size:18px;
+    }
+    .title2 {
+     color: #fffefe;
+     text-align: center; 
+     font-size: 1.2rem;
+     margin-bottom: 30px;
+     font-weight: 600;
+        }
+
+     .contenedor-grid {
+    display:grid;
+    gap:30px;
+    max-width:1000px;
+    margin:auto;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    }
+    hr{
+    border:none;
+    height:2px;
+    background:#FFD54F;
+    width:80%;
+    margin:40px auto;
+    }
+        
+    .integrante-card{
+    background:rgba(30, 30, 30, 0.32);
+    border:1px solid #3A3A3A;
+    border-left:5px solid #F4B400;
+    border-radius:10px;
+    padding:20px;
+    color:white;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,.35);
+    padding:20px;
+     margin-bottom: 15px;
+    }
+    .integrante-card:hover{
+    background:rgba(244,180,0,.15);
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.45);
+    }
+    .logo:hover{
+    transform: translateY(-3px);
+    }
+    .integrante-card h4 {
+    margin: 0 0 8px 0;
+    color: #f9f9f9;
+    font-size: 1.1rem;
+    }
+
+    .integrante-card p {
+    margin: 4px 0;
+    color: #ffffff;
+    font-size: 0.95rem;
+    }
+       
+    i {
+    color:white;
+    font-size: 30px;
+    }
+
+    .info-box{
+    max-width:800px;
+    margin:15px auto;
+    background:rgba(30, 30, 30, 0.32);
+    border-radius:10px;
+    padding:15px;
+    border: 1px solid rgb(255, 250, 250);
+    }
+    .integrante-card h4{
+    color:#F4B400;
+    }
+
+    .integrante-card p{
+    color:#EAEAEA;
+    }
+    .skills{
+    margin-top:20px;
+    width:100%;
+    }
+
+    .skill{
+    margin-bottom:12px;
+    }
+
+    .skill p{
+    margin:0 0 5px;
+    color:#D6D6D6;
+    font-size:14px;
+    }
+
+
+    .skill-line{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    flex-wrap:nowrap;
+    gap:10px;
+    width:100%;
+    }
+
+    .bar{
+    width:100%;
+    max-width:130px;
+    height:14px;
+    border-radius:0px;
+    overflow:hidden;
+    flex:none;
+    }
+
+    .progress{
+    height:100%;
+    background:#F4B400;
+    border-radius:0px;
+    }
+
+    .skill-line span{
+    display:inline-block;
+    color:#f6f5f1;
+    font-size:15px;
+    font-weight:bold;
+    width:auto;
+    }
+
+@keyframes load{
+    from{
+        width:0;
+    }
+}
+    .leadership{
+    width:95%;
+    }
+    .communication{
+    width:90%;
+    }
+    .responsibility{
+    width:100%;
+    }
+    .teamwork{
+    width:100%;
+    }
+    .organization{
+    width:90%;
+    }
+    .speed{
+    width:95%;
+    }
+    .creativity{
+    width:100%;
+    }
+    .strategy{
+    width:90%;
+    }
+    .preparation{
+    width:90%;
+    }
+    .quality{
+    width:95%;
+    }
+    .finance{
+    width:100%;
+    }
+    .planning{
+    width:90%;
+    }
+    .efficiency{
+    width:95%;
+    }
+    .adaptability{
+    width:90%;
+    }
+
+    .info-box summary{
+    text-align: center;
+    cursor:pointer;
+    font-size:20px;
+    font-weight:bold;
+    color: white;
+    }
+    .info-box p{
+    margin-top:15px;
+    color:#fffafa;
+    }
+    .info-box[open]{
+     background:rgba(244,180,0,.15);
+    }
+    .info-box[open] summary {
+    color: rgb(248, 246, 246);
+    }
+    .info-box summary::marker{
+     color:#F4B400;
+    }
+
+    .info-box[open] p{
+    color:rgb(255, 253, 253)
+    }
+    .info-box i{
+     color:#F4B400;
+    }
+    .info-box[open] i{
+     color:#ffffff;
+    }
+    details[open] p{
+    animation:fade .4s ease;
+    }
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(-10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+    .list{
+    list-style-type: none;
+    }
+   footer{
+    text-align:center;
+    margin-top:40px;
+    color:#ffffff;
+    }
+    .btn-home{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin:30px auto;
+    padding:12px 25px;
+    background:#FFD54F;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:30px;
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    }
+
+    .btn-home:hover{
+    background:#ffffff;
+    color:#000;
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,0,0,.4);
+    }
+
+    .btn-home i{
+    font-size:18px;
+    color:inherit;
+    }
+/* responsive */
+@media (max-width: 600px){
+
+    body{
+    padding:10px;
+    overflow-x:hidden;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+      
+    }
+
+    .title{
+        font-size:1.4rem;
+        line-height:1.4;
+    }
+
+    .logo{
+        width:110px;
+        height:110px;
+        margin-top:15px;
+    }
+
+    .slogan{
+        font-size:16px;
+        margin-top:-10px;
+        margin-bottom:20px;
+    }
+
+    .introduction{
+        font-size:15px;
+        line-height:1.5;
+        padding:0 10px;
+    }
+
+    .title2{
+        font-size:1.1rem;
+    }
+
+    .contenedor-grid{
+        grid-template-columns:1fr;
+        gap:15px;
+        width:90%;
+    }
+
+    .info-box{
+        width:auto;
+        padding:12px;
+        margin:10px 0;
+    }
+
+    .info-box summary{
+        font-size:18px;
+    }
+
+    .info-box p{
+        font-size:14px;
+        line-height:1.5;
+    }
+
+    .integrante-card{
+        padding:15px;
+        border-radius:12px;
+        margin-bottom:15px;
+    }
+
+    .integrante-card h4{
+        font-size:1rem;
+        overflow-wrap:break-word;
+        word-break:break-word;
+    }
+
+    .integrante-card p{
+        font-size:.85rem;
+        line-height:1.5;
+    }
+
+    .skills{
+        width:100%;
+    }
+
+    .skill-line{
+        width:100%;
+        gap:8px;
+    }
+
+    .bar{
+        width:100%;
+        max-width:130px;
+    }
+
+    i{
+        font-size:22px;
+    }
+
+    .btn-home{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        width:100%;
+        box-sizing:border-box;
+        padding:12px;
+    }
+
+    footer{
+        font-size:14px;
+        padding-bottom:20px;
+    }
+
+    hr{
+        width:100%;
+    }
+}
+
+</style>
+</head>
+<body>
+
+    <h2 class="title" id="abouttitle">
+        <span data-section="about" data-value="title">Información del grupo</span>
+        <img src="logo1.png" class="logo"><br>
+    </h2>
+
+    <h3 class="slogan" data-section="about" data-value="slogan">
+        "Tu hambre no espera, y nosotros tampoco"
+    </h3>
+
+    <p class="introduction" data-section="about" data-value="introduccion">
+        Somos un grupo que trabaja de manera organizada y busca impulsar nuestro emprendimiento
+        con total compromiso para alcanzar grandes éxitos. Representamos el esfuerzo,
+        la responsabilidad y la perseverancia; somos SABOR EXPRESS.
+    </p>
+
+    <div class="contenedor-grid">
+
+        <div class="columna-izquierda">
+            <details class="info-box" id="aboutdetails">
+                <summary data-section="about" data-value="mision"><i class="fa-solid fa-bullseye"></i> Misión</summary>
+
+                <p data-section="about" data-value="mision-text">
+                    Ofrecer alimentos de alta calidad con rapidez, excelente atención al cliente
+                    y un compromiso con la satisfacción de nuestros clientes.
+                </p>
+
+            </details>
+        </div>
+
+        <div class="columna-derecha">
+            <details class="info-box" id="aboutdetails2">
+                <summary data-section="about" data-value="vision"><i class="fa-solid fa-bullseye"></i> Visión</summary>
+
+                <p data-section="about" data-value="vision-text">
+                    Convertirnos en una empresa reconocida por su calidad, innovación
+                    y excelente servicio dentro de la industria de comida rápida.
+                </p>
+
+            </details>
+        </div>
+
+    </div>
+
+    <h3 class="title2" data-section="about" data-value="integrantes">Integrantes:</h3>
+    <hr>
+
+    <div class="contenedor-grid">
+
+        <div class="columna-izquierda">
+
+            <div class="integrante-card">
+                <h4 data-section="about" data-value="integrantes-name1">Anthony Gabriel Hernandez Cartagena <i class="fa-solid fa-user"></i></h4>
+
+                <p data-section="about" data-value="integrantes-description1">
+                    Estudiante de tercer año de Bachillerato Técnico en Desarrollo de Software.
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </p>
+
+                <p data-section="about" data-value="integrantes-age1">
+                    <strong>Edad:</strong> 18
+                    <i class="fa-solid fa-cake-candles"></i>
+                </p>
+
+                <p data-section="about" data-value="integrantes-role1"><strong>Rol:</strong> <span>Líder del equipo</span></p>
+
+                <div class="skills">
+
+                    <div class="skill">
+                        <p><strong data-section="about" data-value="integrantes-textspecial1">Liderazgo</strong></p>
+                        <div class="skill-line">
+                            <div class="bar">
+                                <div class="progress leadership"></div>
+                            </div>
+                            <span>95%</span>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <p><strong data-section="about" data-value="integrantes-textspecial2">Comunicación</strong></p>
+                        <div class="skill-line">
+                            <div class="bar">
+                                <div class="progress communication"></div>
+                            </div>
+                            <span>90%</span>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <p><strong data-section="about" data-value="integrantes-textspecial3">Responsabilidad</strong></p>
+                        <div class="skill-line">
+                            <div class="bar">
+                                <div class="progress responsibility"></div>
+                            </div>
+                            <span>100%</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="integrante-card">
+
+                <h4 data-section="about" data-value="integrantes-name2">Adrian Jeremias Rodriguez Guevara <i class="fa-solid fa-user"></i></h4>
+
+                <p data-section="about" data-value="integrantes-description2">
+                    Estudiante de tercer año de Bachillerato Técnico en Desarrollo de Software
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </p>
+
+                <p data-section="about" data-value="integrantes-age2">
+                    <strong>Edad:</strong > 18
+                    <i class="fa-solid fa-cake-candles"></i>
+                </p>
+
+                <p data-section="about" data-value="integrantes-role2"><strong>Rol:</strong> <span>Personal de cocina</span></p>
+
+                <div class="skills">
+
+                    <div class="skill">
+                        <p><strong data-section="about" data-value="integrantes-textspecial4">Trabajo en equipo</strong></p>
+                        <div class="skill-line">
+                            <div class="bar">
+                                <div class="progress teamwork"></div>
+                            </div>
+                            <span>100%</span>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <p><strong data-section="about" data-value="integrantes-textspecial5">Organización</strong></p>
+                        <div class="skill-line">
+                            <div class="bar">
+                                <div class="progress organization"></div>
+                            </div>
+                            <span>90%</span>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <p><strong data-section="about" data-value="integrantes-textspecial6">Rapidez</strong></p>
+                        <div class="skill-line">
+                            <div class="bar">
+                                <div class="progress speed"></div>
+                            </div>
+                            <span>95%</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="integrante-card">
+
+                <h4 data-section="about" data-value="integrantes-name3">Jose David Salazar Palacios <i class="fa-solid fa-user"></i></h4>
+
+                <p data-section="about" data-value="integrantes-description3">
+                    Estudiante de tercer año de Bachillerato Técnico en Desarrollo de Software
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </p>
+
+                <p data-section="about" data-value="integrantes-age3">
+                    <strong>Edad:</strong > 18
+                    <i class="fa-solid fa-cake-candles"></i>
+                </p>
+
+                <p data-section="about" data-value="integrantes-role3"><strong>Rol:</strong> <span>Marketing</span></p>
+
+                <div class="skills">
+
+                    <div class="skill">
+                        <p><strong data-section="about" data-value="integrantes-textspecial7">Creatividad</strong></p>
+                        <div class="skill-line">
+                            <div class="bar">
+                                <div class="progress creativity"></div>
+                            </div>
+                            <span>100%</span>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <p><strong data-section="about" data-value="integrantes-textspecial8">Comunicación</strong></p>
+                        <div class="skill-line">
+                            <div class="bar">
+                                <div class="progress communication"></div>
+                            </div>
+                            <span>95%</span>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <p><strong data-section="about" data-value="integrantes-textspecial9">Estrategia</strong></p>
+                        <div class="skill-line">
+                            <div class="bar">
+                                <div class="progress strategy"></div>
+                            </div>
+                            <span>90%</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="columna-derecha">
+
+            <div class="integrante-card">
+
+                <h4 data-section="about" data-value="integrantes-name4">Daniela Alexandra López Navarro <i class="fa-solid fa-user"></i></h4>
+
+                <p data-section="about" data-value="integrantes-description4">
+                    Estudiante de tercer año de Bachillerato Técnico en Desarrollo de Software
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </p>
+
+                <p data-section="about" data-value="integrantes-age4">
+                    <strong>Edad:</strong> 18
+                    <i class="fa-solid fa-cake-candles"></i>
+                </p>
+
+                <p data-section="about" data-value="integrantes-role4"><strong>Rol:</strong> <span>Personal de cocina</span></p>
+                    
+                <div class="skills">
+
+                    <div class="skill">
+                        <p><strong data-section="about" data-value="integrantes-textspecial10">Trabajo en equipo</strong></p>
+                        <div class="skill-line">
+                            <div class="bar">
+                                <div class="progress teamwork"></div>
+                            </div>
+                            <span>95%</span>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <p><strong data-section="about" data-value="integrantes-textspecial11">Preparación</strong></p>
+                        <div class="skill-line">
+                            <div class="bar">
+                                <div class="progress preparation"></div>
+                            </div>
+                            <span>90%</span>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <p><strong data-section="about" data-value="integrantes-textspecial12">Control de calidad</strong></p>
+                        <div class="skill-line">
+                            <div class="bar">
+                                <div class="progress quality"></div>
+                            </div>
+                            <span>95%</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="integrante-card">
+
+                <h4 data-section="about" data-value="integrantes-name5">Brayan Elenilson Aguilar Navarro <i class="fa-solid fa-user"></i></h4>
+
+                <p data-section="about" data-value="integrantes-description5">
+                    Estudiante de tercer año de Bachillerato Técnico en Desarrollo de Software
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </p>
+
+                <p data-section="about" data-value="integrantes-age5">
+                    <strong>Edad:</strong> 18
+                    <i class="fa-solid fa-cake-candles"></i>
+                </p>
+
+                <p data-section="about" data-value="integrantes-role5"><strong>Rol:</strong> <span>Tesorero</span></p>
+
+                <div class="skills">
+
+                    <div class="skill">
+                        <p><strong data-section="about" data-value="integrantes-textspecial13">Organización</strong></p>
+                        <div class="skill-line">
+                            <div class="bar">
+                                <div class="progress organization"></div>
+                            </div>
+                            <span>95%</span>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <p><strong data-section="about" data-value="integrantes-textspecial14">Control financiero</strong></p>
+                        <div class="skill-line">
+                            <div class="bar">
+                                <div class="progress finance"></div>
+                            </div>
+                            <span>100%</span>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <p><strong data-section="about" data-value="integrantes-textspecial15">Planificación</strong></p>
+                        <div class="skill-line">
+                            <div class="bar">
+                                <div class="progress planning"></div>
+                            </div>
+                            <span>90%</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="integrante-card">
+
+                <h4 data-section="about" data-value="integrantes-name6">Melvin Daniel Martinez Peñate <i class="fa-solid fa-user"></i></h4>
+
+                <p data-section="about" data-value="integrantes-description6">
+                    Estudiante de tercer año de Bachillerato Técnico en Desarrollo de Software
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </p>
+
+                <p data-section="about" data-value="integrantes-age6">
+                    <strong>Edad:</strong > 18
+                    <i class="fa-solid fa-cake-candles"></i>
+                </p>
+
+                <p data-section="about" data-value="integrantes-role6">
+                    <strong>Rol:</strong> <span>Personal de cocina</span>
+                </p>
+
+                <div class="skills">
+
+                    <div class="skill">
+                        <p><strong data-section="about" data-value="integrantes-textspecial16">Trabajo en equipo</strong></p>
+                        <div class="skill-line">
+                            <div class="bar">
+                                <div class="progress teamwork"></div>
+                            </div>
+                            <span>100%</span>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <p><strong data-section="about" data-value="integrantes-textspecial17">Eficiencia</strong></p>
+                        <div class="skill-line">
+                            <div class="bar">
+                                <div class="progress efficiency"></div>
+                            </div>
+                            <span>95%</span>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <p><strong data-section="about" data-value="integrantes-textspecial18">Adaptabilidad</strong></p>
+                        <div class="skill-line">
+                            <div class="bar">
+                                <div class="progress adaptability"></div>
+                            </div>
+                            <span>90%</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <details class="info-box">
+        <summary data-section="about" data-value="valores">Valores</summary>
+
+        <ul class="list">
+            <li data-section="about" data-value="valores-item1">✔ Responsabilidad</li>
+            <li data-section="about" data-value="valores-item2">✔ Trabajo en equipo</li>
+            <li data-section="about" data-value="valores-item3">✔ Respeto</li>
+            <li data-section="about" data-value="valores-item4">✔ Innovación</li>
+            <li data-section="about" data-value="valores-item5">✔ Compromiso</li>
+        </ul>
+
+    </details>
+
+
+    <a href="main.html" class="btn-home" data-section="about" data-value="volver">
+        <i class="fa-solid fa-house"></i> Volver al inicio
+    </a>
+
+
+    <footer>
+        <p data-section="about" data-value="copyright">© 2026 Sabor Express | Emprendedurismo</p>
+    </footer>
+<script src="./js/main.js"></script>
+</body>
+</html>

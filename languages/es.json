@@ -1,0 +1,111 @@
+{
+    "header-principal": {
+        "title": "Promo · Hamburguesas · Tortas · Tacos"
+    },
+    "header": {
+        "title": "Sabor Express",
+        
+        "text1": "Inicio",
+        "text2": "Negocio",
+        "text3": "Acerca de"
+    },
+    "carrucel1": {
+        "title": "PRODUCTO",
+        "producto": "HAMBURGUESA",
+        "descripcion": "Carne jugosa, queso derretido y vegetales frescos en un pan artesanal. La combinación perfecta de sabores.",
+        "precio": "$2.05"
+    },
+    "carrucel2": {
+        "title": "PRODUCTO",
+        "producto": "TORTA MEXICANA",
+        "descripcion": "Pan suave relleno de carne adobada, aguacate, frijoles y salsa picante. Un clásico de la cocina callejera.",
+        "precio": "$1.50"
+    },
+    "carrucel3": {
+        "title": "PRODUCTO",
+        "producto": "Hot dogs",
+        "descripcion": "pan suave con una salchcha dentro mas aderesos de la mas alta calidad",
+        "precio": "$1.00"
+    },
+    "negocio": {
+        "title": "Sobre Sabor Express",
+        "text1": "Sabor Express es un emprendimiento de comida rápida creado con la finalidad de brindar a nuestros clientes alimentos deliciosos, preparados con ingredientes frescos y de excelente calidad. Nació con la idea de ofrecer un servicio rápido y eficiente, permitiendo que las personas puedan disfrutar de una comida sabrosa a precios accesibles.",
+        "text2": "Nos especializamos en la preparación de hamburguesas, hot dogs y tortas mexicanas, elaboradas con recetas únicas que combinan sabor, calidad y una excelente presentación. Cada uno de nuestros productos es preparado con dedicación para garantizar la satisfacción de nuestros clientes.",
+        "text3": "Nuestra misión es convertirnos en uno de los emprendimientos de comida rápida más reconocidos de la comunidad, destacándonos por nuestro buen servicio, higiene y atención al cliente.",
+        "text4": "Nuestra visión es expandirnos en el futuro, incorporando nuevos productos y servicios, manteniendo siempre el compromiso de ofrecer el mejor sabor y una experiencia inolvidable para cada persona que visite Sabor Express."
+    },
+    "info": {
+        "mision": "Misión",
+        "vision": "Visión",
+        "valores": "Valores",
+        "text1": "Ofrecer comida rápida de excelente calidad, brindando un servicio rápido, amable y accesible.",
+        "text2": "Ser un emprendimiento reconocido por su sabor, innovación y compromiso con los clientes.",
+        "text3": "Calidad, responsabilidad, higiene, respeto, innovación y compromiso."
+    },
+    "footer": {
+        "title": "Sabor Express",
+        "description": "Comida rápida con el mejor sabor y el servicio más rápido.",
+        "volver": "Volver al inicio",
+        "copyright": "© 2026 Sabor Express | Emprendedurismo"
+    },
+    "about": {
+        "title": "Información del grupo",
+        "slogan": "Tu hambre no espera, y nosotros tampoco",
+        "introduccion": "Somos un grupo que trabaja de manera organizada y busca impulsar nuestro emprendimiento con total compromiso para alcanzar grandes éxitos. Representamos el esfuerzo, la responsabilidad y la perseverancia; somos SABOR EXPRESS.",
+        "mision": "Misión",
+        "mision-text": "Ofrecer alimentos de alta calidad con rapidez, excelente atención al cliente y un compromiso con la satisfacción de nuestros clientes.",
+        "vision": "Visión",
+        "vision-text": "Convertirnos en una empresa reconocida por su calidad, innovación y excelente servicio dentro de la industria de comida rápida.",
+        "integrantes": "Integrantes:",
+        "integrantes-name1": "Anthony Gabriel Hernandez Cartagena",
+        "integrantes-description1": "Estudiante de tercer año de Bachillerato Técnico en Desarrollo de Software.",
+        "integrantes-age1": "Edad: 18",
+        "integrantes-role1": "Rol: Líder del equipo",
+        "integrantes-textspecial1": "Liderazgo",
+        "integrantes-textspecial2": "Comunicación",
+        "integrantes-textspecial3": "Responsabilidad",
+        "integrantes-name2": "Adrian Jeremias Rodriguez Guevara",
+        "integrantes-description2": "Estudiante de tercer año de Bachillerato Técnico en Desarrollo de Software.",
+        "integrantes-age2": "Edad: 18",
+        "integrantes-role2": "Rol: Personal de cocina",
+        "integrantes-textspecial4": "Trabajo en equipo",
+        "integrantes-textspecial5": "Organización",
+        "integrantes-textspecial6": "Rapidez",
+        "integrantes-name3": "Jose David Salazar Palacios",
+        "integrantes-description3": "Estudiante de tercer año de Bachillerato Técnico en Desarrollo de Software.",
+        "integrantes-age3": "Edad: 18",
+        "integrantes-role3": "Rol: Marketing",
+        "integrantes-textspecial7": "Creatividad",
+        "integrantes-textspecial8": "Comunicación",
+        "integrantes-textspecial9": "Estrategia",
+        "integrantes-name4": "Daniela Alexandra López Navarro",
+        "integrantes-description4": "Estudiante de tercer año de Bachillerato Técnico en Desarrollo de Software.",
+        "integrantes-age4": "Edad: 18",
+        "integrantes-role4": "Rol: Personal de cocina",
+        "integrantes-textspecial10": "Trabajo en equipo",
+        "integrantes-textspecial11": "Preparación",
+        "integrantes-textspecial12": "Control de calidad",
+        "integrantes-name5": "Brayan Elenilson Aguilar Navarro",
+        "integrantes-description5": "Estudiante de tercer año de Bachillerato Técnico en Desarrollo de Software.",
+        "integrantes-age5": "Edad: 18",
+        "integrantes-role5": "Rol: Tesorero",
+        "integrantes-textspecial13": "Organización",
+        "integrantes-textspecial14": "Control financiero",
+        "integrantes-textspecial15": "Planificación",
+        "integrantes-name6": "Melvin Daniel Martinez Peñate",
+        "integrantes-description6": "Estudiante de tercer año de Bachillerato Técnico en Desarrollo de Software.",
+        "integrantes-age6": "Edad: 18",
+        "integrantes-role6": "Rol: Personal de cocina",
+        "integrantes-textspecial16": "Trabajo en equipo",
+        "integrantes-textspecial17": "Eficiencia",
+        "integrantes-textspecial18": "Adaptabilidad",
+        "valores": "Valores",
+        "valores-item1": "✔ Responsabilidad",
+        "valores-item2": "✔ Trabajo en equipo",
+        "valores-item3": "✔ Respeto",
+        "valores-item4": "✔ Innovación",
+        "valores-item5": "✔ Compromiso",
+        "volver": "Volver al inicio",
+        "copyright": "© 2026 Sabor Express | Emprendedurismo"
+    }
+}
